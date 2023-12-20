@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link, Form } from "react-router-dom";
+import {BrowserRouter, Routes, Route, Link, Form, HashRouter } from "react-router-dom";
 import Home from './Home/Home'
 import { useState } from "react";
 import Contacts from "./components/Contacts";
@@ -19,15 +19,15 @@ function App() {
   }
   return (
     !loading && (
-      <Router>
-        <Routes>
-       <Route exact path="learning/" element={<Home/>}></Route>
-       <Route path="contacts" element={<Contacts/>}></Route>
-       <Route path="facilities" element={<Qr/>}></Route>
-       <Route path="login" element={<Login/>}></Route>
-       <Route path="signup" element={<SignUp/>}></Route>
-       </Routes>
-      </Router>
+      <>
+      <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route path="/contacts" element={<Contacts/>} />
+          <Route path="/facilities" element={<Qr/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<SignUp/>} />
+          </Routes>
+       </>
       // <Test/>
     )
   );
