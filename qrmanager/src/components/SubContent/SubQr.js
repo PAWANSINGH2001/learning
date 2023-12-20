@@ -38,7 +38,7 @@ function SubQr() {
   });
   const changeRollNumber = async () => {
     const response = await Axios(
-      `http://localhost:3001/api/v1/alldata/${RollNumber}`
+      `https://lean-54ue.onrender.com//api/v1/alldata/${RollNumber}`
     );
     setInput(response.data.data);
     console.log(response);
